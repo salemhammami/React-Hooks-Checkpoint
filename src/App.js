@@ -7,6 +7,9 @@ import NavMovie from './Components/NavMovie';
 import ListMovie from './Components/ListMovie';
 import FilterMovie from './Components/FilterMovie';
 import Logo from '/Users/mac/Desktop/GoMyCode/Divers/We/we/src/Logo.svg';
+import { Route, Routes } from 'react-router-dom';
+import Pricing from './Pricing';
+import DescriptionCard from './Components/DescriptionCard';
 
 function App() {
   
@@ -30,6 +33,17 @@ function App() {
 
 <NavMovie movies={movies} setMovies={setMovies}/>
  {/* <AddMovie movies={movies} setMovies={setMovies} />   */}
+
+        <Routes>
+          {/* <Route path='/' element={}/> */}
+          <Route path='/pricing' element={<Pricing/>}/>
+
+          <Route path='/view/:id' element={<DescriptionCard movies={movies} />}/>
+          
+        </Routes>
+
+
+
   <FilterMovie setSearch={setSearch} setRate={setRate} search={search} rate={rate}/>
   <ListMovie movies={movies} setMovies={setMovies} search={search} rate={rate}/>  
 

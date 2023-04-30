@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Rating from '@mui/material/Rating';
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const CardMovie =({el,movies,setMovies})=>{
 
@@ -10,6 +11,11 @@ const CardMovie =({el,movies,setMovies})=>{
     const [showMore, setShowMore] = useState(false);
     const handleDelete=(x)=>{
       setMovies(movies.filter(el=> el.id !== x))}
+
+
+
+ 
+
 
     return(
         <Card className='cardStyle'>
@@ -22,7 +28,13 @@ const CardMovie =({el,movies,setMovies})=>{
           {/* {el.description} */}
         </Card.Text>
         <Rating name="read-only" value={el.rating} readOnly /> <br></br> <br></br>
-        <Button onClick={()=>handleDelete(el.id)} variant="dark" className='btnDel' >Delete</Button>
+
+        <div className='btnPm'>
+        <Button onClick={()=>handleDelete(el.id)} variant="outline-dark" className='btnDel' >Delete</Button>
+
+        <Button variant="dark" className='btnDel' > <Link style={{ textDecoration: 'none', color:'white' }} to={`/view/${el.id}`}> View </Link>    </Button>
+        </div>
+
       </Card.Body>
       
     </Card>
