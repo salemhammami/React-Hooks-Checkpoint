@@ -162,9 +162,11 @@ margin-bottom: 10px; */
          
          
          
-          @media screen and (max-width:440px)
+          @media screen and (max-width:600px)
             {
               .cardStyle{ width: 30rem;border:none ;margin:10px}
+              .rateStyle{ margin-top: 30px;}
+              .btnReset{margin-top: 30px;}
             }
 
             .btnPm{
@@ -177,4 +179,49 @@ margin-bottom: 10px; */
          .dd{
           color: white;
           text-decoration: none;
+         }
+
+         .Descript{
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-content: space-around;
+          align-items: center;
+          margin: 30px;
+          padding-left: 30%;
+          padding-right: 30%;
+      }
+
+      .ImgDescript{
+        border-radius: 10px;
+      }
+         .paraDescript{
+          text-align: center;
+          color: rgb(60, 60, 60);
+         }
+
+         .my-iframe{
+          width:  768px;
+          height: 432px;
+          margin: 10px;
+          padding: 10px;
+          background-color: black;
+          border-radius: 5px;
+         }
+
+         .btnBack{ margin-top: 36px;
+         width: 110px;}
+
+         .btnBack-2{
+            align-items: center;
+            margin-bottom: 71px;
+            width: 110px;
+         }
+
+         .container{
+          display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
          }

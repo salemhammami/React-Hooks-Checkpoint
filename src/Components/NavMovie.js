@@ -11,11 +11,13 @@ function NavMovie({movies,setMovies}) {
     <div>
 <Navbar bg="dark " variant="dark ">
         <Container>
-        <img src= {Logo} alt="Logo" className='logo' />
+        <a href="/"><img src= {Logo} alt="Logo" className='logo' /></a>
           <Nav  className="d-flex justify-content-between" >
-            <Nav.Link as={Link} to="/" style={{paddingRight:'50px'}} href="#home" className='changetext'> Home</Nav.Link>
-            <Nav.Link style={{paddingRight:'50px'}} href="#movies" className='changetext'>Movies</Nav.Link>
-            <Nav.Link as={Link} to="/pricing" className='changetext'>Pricing</Nav.Link>
+            <Nav.Link as={Link} to="/" href="#home" className='changetext' style={{paddingRight:'50px'}}> Home</Nav.Link>
+            
+            <Nav.Link as={Link} to="/pricing" className='changetext' style={{paddingRight:'50px'}}>Pricing</Nav.Link>
+
+
              </Nav>
              <AddMovie movies={movies} setMovies={setMovies} />  
         </Container>

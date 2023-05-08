@@ -9,9 +9,9 @@ const FilterMovie=({setSearch,setRate,search,rate})=>{
     }
     return(
         <div className='filterClass'>
-            <input className='searchStyle' placeholder='Find Movies & TV Show' value={search} onChange={(e)=>setSearch(e.target.value)} type="text"/>
+            <input className='searchStyle' placeholder='Find Movies & TV Show' value={search} onChange={(e)=>setSearch(e.target.value)} type="text"/> <br/>
             <Rating className='rateStyle' value={rate} onChange={(e)=>setRate(e.target.value)} name="simple-controlled"/>
-            <br /><Button variant="dark"  className='' onClick={handelReset}>
+            <Button variant="dark"  className='btnReset' onClick={handelReset}>
             Reset          </Button>
         </div>
     )

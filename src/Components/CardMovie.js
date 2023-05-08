@@ -17,7 +17,7 @@ const CardMovie =({el,movies,setMovies})=>{
  
 
 
-    return(
+    return(<div>
         <Card className='cardStyle'>
       <Card.Img variant="top" src={el.posterUrl} />
       <Card.Body>
@@ -32,12 +32,14 @@ const CardMovie =({el,movies,setMovies})=>{
         <div className='btnPm'>
         <Button onClick={()=>handleDelete(el.id)} variant="outline-dark" className='btnDel' >Delete</Button>
 
-        <Button variant="dark" className='btnDel' > <Link style={{ textDecoration: 'none', color:'white' }} to={`/view/${el.id}`}> View </Link>    </Button>
+        <Button variant="dark" className='btnDel' > <Link style={{ textDecoration: 'none', color:'white' }} to={`/view/${el.id}`}> Trailer </Link>    </Button>
         </div>
-
+        
       </Card.Body>
       
     </Card>
+
+    </div>
     )
 }
 
